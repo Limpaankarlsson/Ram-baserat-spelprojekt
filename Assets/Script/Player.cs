@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
         Vector2 direction = new Vector2(Rightandleft, Upanddown).normalized;
 
-        Move(direction);
+        //Move(direction);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
 
 
-        void Move(Vector3 Direction)
+       /* void Move(Vector3 Direction)
         {
             Vector3 min = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0));
             Vector3 max = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
 
             transform.position = pos;
 
-        }
+        }*/
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
