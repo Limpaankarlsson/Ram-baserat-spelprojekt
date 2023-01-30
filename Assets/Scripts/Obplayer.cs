@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obplayer : MonoBehaviour
 {
-    private float Playerspeed = 4;
+    private float Playerspeed = 10;
     //float HP = 1;
     //public GameObject laser;
 
@@ -17,14 +17,15 @@ public class Obplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float Rightandleft = Input.GetAxis("Horizontal");
-        //float Upanddown = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * Rightandleft * Playerspeed * Time.deltaTime);
-        //transform.Translate(Vector3.up * Upanddown * Playerspeed * Time.deltaTime);
+        //float Rightandleft = Input.GetAxis("Horizontal");
+        float Upanddown = Input.GetAxis("Vertical");
+        //transform.Translate(Vector3.right * Rightandleft * Playerspeed * Time.deltaTime);
+        transform.Translate(Vector3.up * Upanddown * Playerspeed * Time.deltaTime);
 
-        Vector2 direction = new Vector2(Rightandleft, 0).normalized;
+        Vector2 direction = new Vector2(0, Upanddown).normalized;
 
         //Move(direction);
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
