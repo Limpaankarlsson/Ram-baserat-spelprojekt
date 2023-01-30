@@ -30,7 +30,15 @@ public class Player : MonoBehaviour
         {
             //Instantiate(laser, transform.position, Quaternion.identity, transform);
         }
-
+        
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Playerspeed += 6;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Playerspeed -= 6;
+        }
 
 
        /* void Move(Vector3 Direction)
