@@ -1,0 +1,8 @@
+Alert ljud (när de ser dig, tänker i stil med Metal Gear Solid)
+Fotsteg gående
+Fotsteg sprint
+Gevärskott
+	(Reload ljud? Tänker att de har ett bolt action gevär)
+Ambience natt
+Vindpust som kommer då och då
+Kanske något läskigt "skräckljud" som också kommer då och då
