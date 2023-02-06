@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float Playerspeed = 4;
+
+    private float playerSpeed;
+    public float baseSpeed = 4;
+    public float sprintSpeed = 6;
     //float HP = 1;
     //public GameObject laser;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerSpeed = baseSpeed; // Initialize here so we can modify via Unity
         transform.position = new Vector3(0, 0, 0);
     }
 
@@ -19,8 +23,8 @@ public class Player : MonoBehaviour
     {
         float Rightandleft = Input.GetAxis("Horizontal");
         float Upanddown = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * Rightandleft * Playerspeed * Time.deltaTime);
-        transform.Translate(Vector3.up * Upanddown * Playerspeed * Time.deltaTime);
+        transform.Translate(Vector3.right * Rightandleft * playerSpeed * Time.deltaTime);
+        transform.Translate(Vector3.up * Upanddown * playerSpeed * Time.deltaTime);
 
         Vector2 direction = new Vector2(Rightandleft, Upanddown).normalized;
 
@@ -30,15 +34,12 @@ public class Player : MonoBehaviour
         {
             //Instantiate(laser, transform.position, Quaternion.identity, transform);
         }
+
+        if (Input.GetButton("Sprint"))
+            playerSpeed = baseSpeed + sprintSpeed;
+        else
+            playerSpeed = baseSpeed;
         
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Playerspeed += 6;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            Playerspeed -= 6;
-        }
 
 
        /* void Move(Vector3 Direction)
