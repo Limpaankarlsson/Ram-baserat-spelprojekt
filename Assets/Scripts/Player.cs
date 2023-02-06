@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerSpeed = baseSpeed; // Initialize here so we can modify via Unity
-        transform.position = new Vector3(0, 0, 0);
+       // transform.position = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
