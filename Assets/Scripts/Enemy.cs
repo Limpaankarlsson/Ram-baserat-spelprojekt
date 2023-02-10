@@ -36,18 +36,18 @@ public class Enemy : MonoBehaviour
 
     private void FieldOfViewCheck()
     {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+        Collider2D[] rangeChecks = Physics2D.OverlapCircleAll(transform.position, radius, targetMask);
 
-        if (rangeChecks.Length != 0)
+        if (rangeChecks.Length > 0)
         {
             Transform target = rangeChecks[0].transform;
-            Vector3 directionToTarget = (target.position - transform.position).normalized;
+            Vector2 directionToTarget = (target.position - transform.position).normalized;
 
-            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            if (Vector2.Angle(transform.up, directionToTarget) < angle / 2)
             {
-                float distanceToTarget = Vector3.Distance(transform.position, target.position);
+                float distanceToTarget = Vector2.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, ObjMask))
+                if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, ObjMask))
                     CanSeePlayer = true;
                 else
                     CanSeePlayer = false;
