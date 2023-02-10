@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &219825165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 934066100248901368, guid: d6815fd7d29fbf042b30cd9b84b5ec8b, type: 3}
+  m_PrefabInstance: {fileID: 1031453451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 934066100248901368, guid: d6815fd7d29fbf042b30cd9b84b5ec8b, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1491459284111054110, guid: d6815fd7d29fbf042b30cd9b84b5ec8b, type: 3}
       propertyPath: m_RootOrder
@@ -1213,6 +1218,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3085416500469898992, guid: 44625ff35d4662b4491b15563e1e703b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3085416500469898992, guid: 44625ff35d4662b4491b15563e1e703b, type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
@@ -1262,6 +1271,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5586514104731982457, guid: 44625ff35d4662b4491b15563e1e703b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517157103778308674, guid: 44625ff35d4662b4491b15563e1e703b, type: 3}
+      propertyPath: PlayerRef
+      value: 
+      objectReference: {fileID: 219825165}
+    - target: {fileID: 7517157103778308674, guid: 44625ff35d4662b4491b15563e1e703b, type: 3}
+      propertyPath: CanSeePlayer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
